@@ -1,0 +1,18 @@
+//定义变量
+@import "./variables";
+//按序引入 normalize.scss 里用到了前面定义的变量
+
+@import "./reboot";
+
+@import "./mixin";
+@import "./animation";
+
+@import "../components/button/style";
+@import "../components/menu/style";
+@import "../components/icon/style";
+@import "../components/alert/style";
+@import "../components/input/style";
+@import "../components/autoComplete/style";
+@import "../components/upload/style";
+@import "../components/progressBar/style"
+
