@@ -26,19 +26,19 @@ describe('test button component',()=>{
     expect(element.disabled).toBeFalsy()
   })
   it('should render the correct component based on different props',()=>{
-    render(<Button {...testProps}>hello</Button>);
+    render(<Button {...testProps} label="hello" />);
     const element = screen.getByText("hello") as HTMLButtonElement;
     expect(element).toBeTruthy();
     expect(element).toHaveClass('btn-primary btn-sm klass')
   })
   it('should render a link when btnType equals link and href is provided',()=>{
-    render(<Button btnType="link" href="http://dummyurl">Link</Button>)
+    render(<Button btnType="link" href="http://dummyurl" label="Link" />)
     const element = screen.getByText("Link");
     expect(element.tagName).toEqual('A')
     expect(element).toHaveClass('btn btn-link')
   })
   it('should render disable button when disable provided',()=>{
-    render(<Button {...disabledProps}>hello</Button>);
+    render(<Button {...disabledProps} label="hello"/>);
     const element = screen.getByText("hello") as HTMLButtonElement
     expect(element).toBeInTheDocument()
     expect(element.disabled).toBeTruthy()

@@ -22,11 +22,11 @@ const UploadList:FC<UploadListProps> = (props) =>{
               {file.name}
             </span>
             <span className="file-status">
-              {file.status === "uploading" &&<Icon icon="spinner" spin theme="primary"/>}
-              {file.status === "success" &&<Icon icon="check-circle" theme="success"/>}
-              {file.status === "error" &&<Icon icon="times-circle" theme="danger"/>}
+              {(file.status==="ready" || file.status === "uploading") && <Icon icon="spinner" spin theme="primary"/>}
+              {file.status === "success" && <Icon icon="check-circle" theme="success"/>}
+              {file.status === "error" &&  <Icon icon="times-circle" theme="danger"/>}
             </span>
-            <span className="file-actions">
+            <span className="file-actions" >
               <Icon icon="times" onClick={()=>{onRemove(file)}}/>
             </span>
             {file.status==="uploading" && <ProgressBar percent={file.percent}/>}

@@ -3,7 +3,7 @@ import MessageWrapper from './MessageWrapper';
 
 
 
-export const msg = (function() {
+const Message = (function() {
   let container = document.getElementById('message-container')
   if (!container) {
     container = document.createElement('div')
@@ -40,5 +40,6 @@ export const msg = (function() {
       })
     },
   }
-})()
+})();
+export default Message;
 

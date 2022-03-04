@@ -1,7 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { action } from '@storybook/addon-actions'
-import Upload,{UploadProps} from './upload';
-import Icon from '../icon/icon';
+import {Upload,UploadProps} from './upload';
 
 export default {
   title: 'Components/Upload',
@@ -38,9 +37,6 @@ const defaultUpload: ComponentStory<typeof Upload>=(args)=>{
       dragable={true}
       // beforeUpload={strainFileSize}
       >
-        {/* <Icon icon="upload" size="5x" theme="secondary" />
-        <br/>
-        <p>Drag file over to upload</p> */}
       </Upload>
   )
 }

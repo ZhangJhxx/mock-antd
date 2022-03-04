@@ -10,7 +10,6 @@ interface BaseButtonProps {
   btnType?: ButtonType
   label:string
   hollow?: boolean
-  styles?:React.CSSProperties
 }
 type NativeButtonType = BaseButtonProps & React.ButtonHTMLAttributes<HTMLElement>;
 type NativeAnchorHTMLType = BaseButtonProps & React.AnchorHTMLAttributes<HTMLElement>;
@@ -24,7 +23,6 @@ const Button: React.FC<ButtonProps> = (props) => {
     btnType,
     href,
     label,
-    styles,
     hollow,
     ...restProps
   } = props;

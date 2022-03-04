@@ -140,7 +140,7 @@ export const Upload: FC<UploadProps> = (props) => {
           res.then((data)=>{
             postFile(data);
           })
-        }else if( res === true){
+        }else if(res === true){
           postFile(file);
         }
       }
@@ -174,6 +174,7 @@ export const Upload: FC<UploadProps> = (props) => {
         :<Button btnType="primary" label="Upload" />
         }
       <input
+        data-testid="hidden-input"
         className="my-file-input"
         style={{display: 'none'}}
         ref={fileInput}
@@ -183,7 +184,7 @@ export const Upload: FC<UploadProps> = (props) => {
         accept={accept}
         />
       </div>
-      <UploadList 
+      <UploadList
         fileList={fileList}
         onRemove={handleRemove}
         />
@@ -194,4 +195,3 @@ Upload.defaultProps={
   name:"file", 
   // accept:"*"
 }
-export default Upload;
