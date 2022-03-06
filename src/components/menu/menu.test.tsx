@@ -47,8 +47,8 @@ describe('test Menu and MenuItem component', () => {
     expect(menuElement).toBeInTheDocument();
     expect(menuElement).toHaveClass("menu test");
 
-    const meneItemGronp = within(menuElement).getAllByRole("listitem");
-    expect(meneItemGronp.length).toEqual(6);
+    const meneItemGroup = within(menuElement).getAllByRole("listitem");
+    expect(meneItemGroup.length).toEqual(4);
   })
   it('should change active and call the right callback',()=>{
     setup(testProps);

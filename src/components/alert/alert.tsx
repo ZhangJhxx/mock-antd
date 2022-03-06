@@ -22,7 +22,7 @@ const Alert:React.FC<AlertProps> =(props) => {
   const [show, setShow] = useState(true);
  
   useEffect(() =>{
-    autoClose && setTimeout(() =>{
+    closeAble && autoClose && setTimeout(() =>{
       setShow(false);
       if(onHide) onHide();
     },durationTime)
@@ -42,11 +42,13 @@ const Alert:React.FC<AlertProps> =(props) => {
       timeout={300}
       animation="zoom-in-top">
       <div className={classes} style={style}>
-        <Icon 
-          className='info-icon'
-          theme={alertType} 
-          icon={alertType === "success" ? "check-circle" : "exclamation-circle"}/>
-        <span>{message}</span>
+        <span>
+          {alertType === "success" && <Icon icon="check-circle" theme={alertType}/>}
+          {alertType === "warning" && <Icon icon="exclamation-triangle" theme={alertType}/>}
+          {alertType === "error" && <Icon icon="exclamation-circle" theme={alertType}/>}
+          {alertType === "default" && <Icon icon="info-circle" theme="primary"/>}
+        </span>
+        <span className="message">{message}</span>
         <div className='close-icon-wrapper'>
           {closeAble && !autoClose ? 
             <Icon icon="times-circle" onClick={handleClose}/> : ""

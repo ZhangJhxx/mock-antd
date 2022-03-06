@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { action } from '@storybook/addon-actions'
-import {Upload,UploadProps} from './upload';
+import Upload,{UploadProps} from './upload';
 
 export default {
   title: 'Components/Upload',

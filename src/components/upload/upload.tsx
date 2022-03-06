@@ -35,7 +35,7 @@ export interface UploadProps {
   dragable?: boolean;
 }
 
-export const Upload: FC<UploadProps> = (props) => {
+const Upload: FC<UploadProps> = (props) => {
   const {
     action,
     onFileChange,
@@ -191,7 +191,9 @@ export const Upload: FC<UploadProps> = (props) => {
       </div>
   )
 }
+
 Upload.defaultProps={
   name:"file", 
   // accept:"*"
 }
+export default Upload;

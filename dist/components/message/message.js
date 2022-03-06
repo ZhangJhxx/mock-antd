@@ -25,18 +25,22 @@ const Message = (function() {
         autoClose
       })
     },
-    error: (message) => {
+    error: (message,durationTime=3000,autoClose=true) => {
       messageWrapper.add({
         key: Math.random().toString().slice(2),
         message,
-        alertType: 'error'
+        alertType: 'error',
+        durationTime,
+        autoClose
       })
     },
-    success: (message) => {
+    success: (message,durationTime=3000,autoClose=true) => {
       messageWrapper.add({
         key: Math.random().toString().slice(2),
         message,
-        alertType: 'success'
+        alertType: 'success',
+        durationTime,
+        autoClose
       })
     },
   }

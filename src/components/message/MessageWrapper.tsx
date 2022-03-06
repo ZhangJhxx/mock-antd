@@ -8,6 +8,12 @@ interface addParams{
   autoClose?:boolean;
   index:number;
 }
+const style = {
+  position:'absolute',
+  width:"fit-content",
+  left:"50%",
+  transform: "translate(-50%)",
+}
 class MessageWrapper extends React.Component {
   state = { 
     list: Array<addParams>()
@@ -25,7 +31,7 @@ class MessageWrapper extends React.Component {
   render() {
     return <div className="message-wrapper">
       {
-        this.state.list.map((item,idx) => <Alert style={{top:`${idx*70+10}px`}} onHide={this.handleHide.bind(this, item)} {...item}></Alert>)
+        this.state.list.map((item,idx) => <Alert style={{top:`${idx*70+10}px`,...style}} onHide={this.handleHide.bind(this, item)} {...item}></Alert>)
       }
     </div>
   }

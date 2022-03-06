@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "esnext",//CommonJs、es6、AMD等
+    "target": "es5",
+    "declaration": true,//.d.ts文件
+    "jsx": "react-jsx",
+    "moduleResolution":"Node",
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true 
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "src/**/*.test.tsx",
+    "src/**/*.stories.tsx",
+    "src/setupTests.ts",
+  ]
+}
