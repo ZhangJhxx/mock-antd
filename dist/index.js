@@ -10,4 +10,3 @@ export { default as AutoComplete } from "./components/autoComplete";
 export { default as Transition } from "./components/transition";
 export { default as ProgressBar } from "./components/progressBar";
 export { default as Alert } from "./components/alert";
-export { default as Message } from "./components/message";
