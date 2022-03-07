@@ -1,6 +1,6 @@
 {
   "name": "mock_componets",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "description": "React componets library",
   "author": "xx1169401905",
   "license": "MIT",
@@ -35,8 +35,8 @@
     "web-vitals": "^2.1.4"
   },
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": "^16.8.0"
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -50,7 +50,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "prepublish": "npm run lint && npm run test:nowatch"
+    "prepublish": "npm run lint && npm run test:nowatch && npm run build"
   },
   "husky": {
     "hooks": {
